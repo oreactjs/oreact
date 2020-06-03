@@ -60,5 +60,11 @@
     "access": "public"
   },
   "devDependencies": {},
-  "author": "Vinay <vinaykevadiaa@gmail.com>"
+  "author": "Vinay <vinaykevadiaa@gmail.com>",
+  "homepage": "https://oreactjs.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oreactjs/oreact.git",
+    "directory": "packages/core"
+  }
 }
