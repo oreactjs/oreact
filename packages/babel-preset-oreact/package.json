@@ -1,0 +1,37 @@
+{
+  "name": "babel-preset-oreact",
+  "version": "0.1.0",
+  "description": "Babel presets for Oreact",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn build:cjs && yarn build:esm && yarn build:es && yarn build:copy-files",
+    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel --config-file ../../babel.config.js ./src --out-dir ./build --ignore \"**/*.test.js\"",
+    "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel --config-file ../../babel.config.js ./src --out-dir ./build/esm --ignore \"**/*.test.js\"",
+    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ../../babel.config.js ./src --out-dir ./build/es --ignore \"**/*.test.js\"",
+    "build:copy-files": "node ../../scripts/copy-files.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.1.0",
+    "@babel/plugin-transform-react-jsx-source": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.1.5",
+    "babel-plugin-dynamic-import-node": "2.2.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.19",
+    "@loadable/babel-plugin": "^5.10.3"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "babel",
+    "oreact",
+    "preset"
+  ],
+  "author": "Vinay <vinaykevadiaa@gmail.com>"
+}

@@ -1,0 +1,64 @@
+{
+  "name": "@oreact/core",
+  "description": "Oreact Core Bundle",
+  "version": "0.1.4",
+  "keywords": [
+    "oreact",
+    "react",
+    "pwa",
+    "saas",
+    "mongo",
+    "mobx",
+    "material-ui",
+    "express"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "sideEffects": false,
+  "scripts": {
+    "build": "yarn build:cjs && yarn build:esm && yarn build:es && yarn build:umd && yarn build:copy-files",
+    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel --config-file ../../babel.config.js ./src --out-dir ./build --ignore \"**/*.test.js\"",
+    "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel --config-file ../../babel.config.js ./src --out-dir ./build/esm --ignore \"**/*.test.js\"",
+    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ../../babel.config.js ./src --out-dir ./build/es --ignore \"**/*.test.js\"",
+    "build:umd": "cross-env BABEL_ENV=production-umd rollup -c scripts/rollup.config.js",
+    "build:copy-files": "node ../../scripts/copy-files.js"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.8.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "@loadable/component": "^5.10.3",
+    "@loadable/server": "^5.10.3",
+    "@material-ui/core": "4.9.3",
+    "@material-ui/icons": "4.9.1",
+    "@material-ui/styles": "4.9.0",
+    "accesscontrol": "^2.2.1",
+    "css-mediaquery": "^0.1.2",
+    "graphql-compose": "^7.8.0",
+    "graphql-compose-mongoose": "^7.3.1",
+    "helmet": "^3.11.0",
+    "lodash": "4.17.11",
+    "mobile-detect": "1.4.3",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.1.4",
+    "mongoose": "^5.9.7",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-helmet-async": "^1.0.4",
+    "react-router-config": "5.1.1",
+    "react-router-dom": "5.1.2"
+  },
+  "resolutions": {
+    "**/react": "16.8.6",
+    "**/react-dom": "16.8.6",
+    "**/react-router": "5.1.2",
+    "**/react-router-dom": "5.1.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {},
+  "author": "Vinay <vinaykevadiaa@gmail.com>"
+}

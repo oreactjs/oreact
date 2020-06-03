@@ -1,0 +1,40 @@
+{
+  "name": "@oreact/express",
+  "description": "Oreact Express",
+  "version": "0.1.0",
+  "keywords": [
+    "oreact",
+    "express",
+    "ssr",
+    "saas",
+    "server"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "sideEffects": false,
+  "scripts": {
+    "build": "yarn build:cjs && yarn build:esm && yarn build:es && yarn build:copy-files",
+    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel --config-file ../../babel.config.js ./src --out-dir ./build --ignore \"**/*.test.js\"",
+    "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel --config-file ../../babel.config.js ./src --out-dir ./build/esm --ignore \"**/*.test.js\"",
+    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ../../babel.config.js ./src --out-dir ./build/es --ignore \"**/*.test.js\"",
+    "build:copy-files": "node ../../scripts/copy-files.js"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.8.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^3.11.0",
+    "hpp": "^0.2.3",
+    "path": "^0.12.7",
+    "ua-parser-js": "^0.7.20",
+    "uuid": "^3.3.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {},
+  "author": "Vinay <vinaykevadiaa@gmail.com>"
+}

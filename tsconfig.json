@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "noErrorTruncation": true,
+    "allowJs": true,
+    "paths": {
+      "@oreact/core": ["./packages/core/src"],
+      "@oreact/core/*": ["./packages/core/src/*"],
+      "@oreact/express": ["./packages/express/src"],
+      "@oreact/express/*": ["./packages/express/src/*"],
+      "@oreact/use": ["./packages/use/src"],
+      "@oreact/use/*": ["./packages/use/src/*"],
+      "@oreact/ui": ["./packages/ui/src"],
+      "@oreact/ui/*": ["./packages/ui/src/*"],
+      "razzle-plugin-oreact": ["./packages/razzle-plugin-oreact/src"],
+      "razzle-plugin-oreact/*": ["./packages/razzle-plugin-oreact/src/*"],
+      "babel-preset-oreact": ["./packages/babel-preset-oreact/src"],
+      "babel-preset-oreact/*": ["./packages/babel-preset-oreact/src/*"]
+    }
+  },
+  "exclude": ["**/build/"]
+}
