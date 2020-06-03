@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-oreact",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Babel presets for Oreact",
   "main": "index.js",
   "license": "MIT",
