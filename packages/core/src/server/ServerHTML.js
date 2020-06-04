@@ -86,6 +86,7 @@ function ServerHTML(props) {
 
     return (
         <HTML
+            nonce={nonce}
             htmlAttributes={ifElse(helmet)(() => helmet.htmlAttributes.toComponent(), null)}
             bodyAttributes={ifElse(helmet)(() => helmet.bodyAttributes.toComponent(), null)}
             headerElements={headerElements.map((x, idx) =>
