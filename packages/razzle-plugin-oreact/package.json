@@ -19,7 +19,7 @@
     "fs": "^0.0.1-security",
     "purgecss": "^1.4.0",
     "razzle": "^3.0.0",
-    "react-dev-utils": "^10.2.1",
+    "react-dev-utils": "^11.0.4",
     "webpack-bundle-analyzer": "^3.6.1",
     "graphql-tag": "^2.10.1",
     "autoprefixer": "^8.6.2",
